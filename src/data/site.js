@@ -8,9 +8,9 @@ export const contact = {
   whatsapp: "2348137639051", // wa.me wants digits only, no leading +
   email: "nfomezirimapartmentslugbe@gmail.com",
   instagram: "nfomezirim_apartment",
-  instagramUrl: "https://instagram.com/nfomezirim_apartment",
-  tiktok: "nfo-mezirim apartments",
-  tiktokUrl: "https://www.tiktok.com/@nfomezirim_apartments",
+  instagramUrl: "https://www.instagram.com/nfomezirim_apartment/",
+  tiktok: "nm_apartmentslugbe",
+  tiktokUrl: "https://www.tiktok.com/@nm_apartmentslugbe",
 };
 
 export const property = {
@@ -19,8 +19,13 @@ export const property = {
   registrationNo: "9556747",
   locality: "Lugbe, Abuja",
   region: "FCT, Nigeria",
-  addressLine: "6 Mazi Fidelis Nwosu Close",
-  fullAddress: "6 Mazi Fidelis Nwosu Close, Lugbe, Abuja, FCT, Nigeria",
+  // The exact street is shared with guests once a stay is confirmed rather
+  // than published here.
+  area: "Lugbe, Abuja, FCT, Nigeria",
+  coords: { lat: 8.9717, lng: 7.352006 },
+  // Google's documented Maps URL API. A maps.app.goo.gl short link resolves to
+  // the same pin but is a redirect that can be retired; this form is stable.
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=8.9717%2C7.352006",
 };
 
 // Pre-filled reservation messages. Kept short — long bodies get truncated by

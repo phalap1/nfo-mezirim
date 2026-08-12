@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { useParallax } from "../hooks/useParallax.js";
 import { gallery } from "../data/gallery.js";
 import { property } from "../data/site.js";
@@ -38,11 +39,20 @@ export default function Residence() {
             Solar arrays across the roofline keep the lights and air conditioning
             running when the grid does not.
           </p>
-          <p className="residence__address">
-            {property.addressLine}
+          <a
+            className="residence__address"
+            href={property.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {property.locality}
             <br />
-            {property.locality}, {property.region}
-          </p>
+            {property.region}
+            <span className="residence__map">
+              View on Google Maps
+              <ArrowUpRight size={14} strokeWidth={1.5} />
+            </span>
+          </a>
         </div>
 
         <div className="residence__art reveal" style={{ "--reveal-delay": "120ms" }}>

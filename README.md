@@ -23,8 +23,13 @@ photography and no invented facts.
 | `others1.mp4` | "The full walk" clip, lounge/kitchen/bedroom stills |
 | `others2.mp4` | "Rooms & suites" clip, bedroom/wardrobe stills |
 | `others0.mp4` | Facade still |
-| `Certification.jpg` | Registered name, CAC number, street address |
+| `Certification.jpg` | Registered name, CAC number |
 | `valid contact informations.jpeg` | Phone, email, Instagram, TikTok, logo mark |
+
+The page shows the locality (Lugbe, Abuja) and a map pin, not the street
+address — the exact door is given to guests once a stay is confirmed. The pin
+uses Google's Maps URL API rather than a `maps.app.goo.gl` short link, which is
+a redirect that can be retired.
 
 Amenity claims are limited to things visible on camera (solar arrays, split AC
 units, the gas range, glass shower enclosures, the desk and printer, the gated

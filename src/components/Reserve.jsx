@@ -56,9 +56,9 @@ export default function Reserve({ onCall }) {
             </li>
             <li>
               <MapPin size={15} strokeWidth={1.4} />
-              <span>
-                {property.addressLine}, {property.locality}
-              </span>
+              <a href={property.mapsUrl} target="_blank" rel="noopener noreferrer">
+                {property.locality} — get directions
+              </a>
             </li>
           </ul>
         </div>

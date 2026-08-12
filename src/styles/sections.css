@@ -289,6 +289,7 @@
 }
 
 .residence__address {
+  display: block;
   margin: 2.25rem 0 0;
   font-family: var(--display);
   font-size: 1.25rem;
@@ -296,6 +297,40 @@
   color: var(--ink-2);
   padding-left: 1.15rem;
   border-left: 2px solid var(--gold);
+  transition: border-color 0.4s var(--ease-soft);
+}
+
+.residence__address:hover {
+  border-left-color: var(--oak);
+}
+
+.residence__map {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--oak);
+}
+
+.residence__map svg {
+  transition: transform 0.4s var(--ease);
+}
+
+.residence__address:hover .residence__map svg {
+  transform: translate(2px, -2px);
+}
+
+.footer__address a {
+  transition: color 0.3s var(--ease-soft);
+}
+
+.footer__address a:hover {
+  color: var(--gold-soft);
 }
 
 .residence__art {

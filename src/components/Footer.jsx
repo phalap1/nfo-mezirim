@@ -12,7 +12,9 @@ export default function Footer() {
         </div>
 
         <address className="footer__address">
-          {property.fullAddress}
+          <a href={property.mapsUrl} target="_blank" rel="noopener noreferrer">
+            {property.area}
+          </a>
         </address>
 
         <div className="footer__social">
@@ -22,7 +24,7 @@ export default function Footer() {
           </a>
           <a href={contact.tiktokUrl} target="_blank" rel="noopener noreferrer">
             <Music2 size={16} strokeWidth={1.4} />
-            <span>{contact.tiktok}</span>
+            <span>@{contact.tiktok}</span>
           </a>
         </div>
 
