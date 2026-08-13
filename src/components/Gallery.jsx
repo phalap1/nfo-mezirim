@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { gallery } from "../data/gallery.js";
+import { gallery, galleryCountWord } from "../data/gallery.js";
 
 function Tile({ item, index, onOpen }) {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <button
-      className={`tile tile--${item.aspect.replace(":", "x")}`}
+      className="tile"
       style={{ "--reveal-delay": `${(index % 3) * 90}ms` }}
       onClick={() => onOpen(index)}
       aria-label={`Open ${item.title}`}
@@ -141,7 +141,9 @@ export default function Gallery() {
         <div>
           <p className="eyebrow">The rooms</p>
           <hr className="rule" />
-          <h2 className="section-title">Sixteen ways to picture the stay.</h2>
+          <h2 className="section-title">
+            {galleryCountWord} ways to picture the stay.
+          </h2>
         </div>
         <p className="gallery__note">
           Every frame below was shot inside the apartments. Tap any one to view it

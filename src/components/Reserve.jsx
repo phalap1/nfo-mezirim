@@ -1,20 +1,19 @@
 import { MapPin, Instagram, Phone, Mail } from "lucide-react";
 import { BookingButtons } from "./BookingActions.jsx";
 import { contact, property } from "../data/site.js";
-import { gallery } from "../data/gallery.js";
-
-const backdrop = gallery.find((g) => g.id === "aerial-courtyard");
+import backdrop from "../assets/gallery/aerial-courtyard.webp";
+import backdropSm from "../assets/gallery/aerial-courtyard-sm.webp";
 
 export default function Reserve({ onCall }) {
   return (
     <section className="reserve" id="reserve">
       <div className="reserve__bg">
         <img
-          src={backdrop.src}
-          srcSet={`${backdrop.thumb} 800w, ${backdrop.src} 1600w`}
+          src={backdrop}
+          srcSet={`${backdropSm} 800w, ${backdrop} 1600w`}
           sizes="100vw"
-          width={backdrop.width}
-          height={backdrop.height}
+          width={1600}
+          height={900}
           alt=""
           aria-hidden="true"
           loading="lazy"

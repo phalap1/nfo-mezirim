@@ -19,10 +19,10 @@ photography and no invented facts.
 
 | Source | Used for |
 | --- | --- |
-| `Change "Launch Discount 20%"…mp4` (aerial) | Hero video loop, three aerial stills |
-| `others1.mp4` | "The full walk" clip, lounge/kitchen/bedroom stills |
+| `Change "Launch Discount 20%"…mp4` (aerial) | Hero video loop, one aerial still |
+| `others1.mp4` | "The full walk" clip, kitchen/bedroom stills |
 | `others2.mp4` | "Rooms & suites" clip, bedroom/wardrobe stills |
-| `others0.mp4` | Facade still |
+| `others0.mp4` | Lounge and facade stills |
 | `Certification.jpg` | Registered name, CAC number |
 | `valid contact informations.jpeg` | Phone, email, Instagram, TikTok, logo mark |
 
@@ -41,11 +41,16 @@ material does not establish it.
 Source footage is 720×1280 portrait phone video and 1276×720 drone footage, so
 the assets were cut and graded rather than used raw:
 
-- **Stills** — frames scored for sharpness and exposure, the best 16 selected,
+- **Stills** — frames scored for sharpness and exposure, the best 12 selected,
   then cropped (dropping the burned-in watermark band), partially white-balanced
   (a full gray-world correction kills the tungsten warmth these rooms rely on),
   auto-levelled, S-curved, and unsharp-masked. Exported as WebP at two widths
-  with a 14px inline blur placeholder each.
+  with a 14px inline blur placeholder each. Dim rooms take a second grade
+  profile that softens sensor noise before lifting the shadows, so sharpening
+  doesn't amplify grain along with detail.
+- **One ratio** — every gallery still is cropped to 3:4, including the exterior,
+  so the grid holds one rhythm at every breakpoint instead of breaking into
+  column spans partway down.
 - **Video** — two-pass H.264, muted, `faststart`. The hero is a 14-second cut of
   the drone pull-back at two resolutions (1.8 MB desktop / 740 KB mobile, chosen
   once at mount so only one downloads). Both walkthroughs start after the
