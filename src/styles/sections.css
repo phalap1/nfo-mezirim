@@ -355,6 +355,41 @@
   box-shadow: 0 30px 70px -30px rgba(12, 28, 43, 0.55);
 }
 
+/* Crossfade stack: every frame is layered, only the active one is opaque. */
+.xfade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--sand);
+}
+
+.xfade__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.6s var(--ease-soft),
+    transform 6.5s var(--ease-soft);
+}
+
+.xfade__img[data-active] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xfade__img {
+    transition: none;
+    transform: none;
+  }
+}
+
 .residence__img--wide {
   position: absolute;
   right: 0;
@@ -449,6 +484,8 @@
   position: relative;
 }
 
+/* Every tile is the same portrait ratio and occupies one column. Mixing
+   aspects and column spans broke the grid's rhythm partway down the page. */
 .tile__frame {
   position: relative;
   display: block;
@@ -456,18 +493,6 @@
   border-radius: 2px;
   background: var(--sand);
   aspect-ratio: 3 / 4;
-}
-
-.tile--16x9 .tile__frame,
-.tile--3x2 .tile__frame,
-.tile--4x3 .tile__frame {
-  aspect-ratio: 3 / 2;
-}
-
-/* Landscape frames earn a wider slot so the grid reads like a contact sheet. */
-.tile--16x9,
-.tile--3x2 {
-  grid-column: span 2;
 }
 
 .tile__lqip,
@@ -571,10 +596,6 @@
 @media (max-width: 620px) {
   .gallery__grid {
     grid-template-columns: 1fr;
-  }
-  .tile--16x9,
-  .tile--3x2 {
-    grid-column: span 1;
   }
   /* Touch has no hover, so the caption stays put. */
   .tile__veil,

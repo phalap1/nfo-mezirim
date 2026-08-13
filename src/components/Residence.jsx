@@ -1,10 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 import { useParallax } from "../hooks/useParallax.js";
-import { gallery } from "../data/gallery.js";
+import { featured } from "../data/gallery.js";
 import { property } from "../data/site.js";
-
-const facade = gallery.find((g) => g.id === "facade");
-const lounge = gallery.find((g) => g.id === "lounge");
+import Crossfade from "./Crossfade.jsx";
+import aerial from "../assets/gallery/aerial-courtyard.webp";
+import aerialSm from "../assets/gallery/aerial-courtyard-sm.webp";
 
 const marks = [
   { figure: "24/7", label: "Solar-backed power" },
@@ -57,26 +57,16 @@ export default function Residence() {
 
         <div className="residence__art reveal" style={{ "--reveal-delay": "120ms" }}>
           <div className="residence__artInner" ref={artRef}>
-            <img
-              className="residence__img residence__img--tall"
-              src={lounge.src}
-              srcSet={`${lounge.thumb} 540w, ${lounge.src} 1080w`}
-              sizes="(max-width: 900px) 60vw, 30vw"
-              width={lounge.width}
-              height={lounge.height}
-              alt={lounge.caption}
-              loading="lazy"
-              decoding="async"
-            />
+            <Crossfade items={featured} className="residence__img--tall" />
           </div>
           <img
             className="residence__img residence__img--wide"
-            src={facade.src}
-            srcSet={`${facade.thumb} 750w, ${facade.src} 1500w`}
+            src={aerial}
+            srcSet={`${aerialSm} 800w, ${aerial} 1600w`}
             sizes="(max-width: 900px) 45vw, 24vw"
-            width={facade.width}
-            height={facade.height}
-            alt={facade.caption}
+            width={1600}
+            height={900}
+            alt="The compound seen from above, with its gated forecourt"
             loading="lazy"
             decoding="async"
           />
