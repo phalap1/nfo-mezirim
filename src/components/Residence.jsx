@@ -20,24 +20,25 @@ export default function Residence() {
     <section className="residence section-pad" id="residence">
       <div className="shell residence__grid">
         <div className="residence__copy reveal">
-          <p className="eyebrow">The residence</p>
+          <p className="eyebrow">The residence · Lugbe, Abuja</p>
           <hr className="rule" />
           <h2 className="section-title">
             A quiet address,
             <br />
-            five minutes from the noise.
+            minutes from the expressway.
           </h2>
           <p className="lede">
-            NFO-Mezirim sits on a residential close in Lugbe, close enough to the
-            airport road to make an early flight and far enough back that you
-            sleep through the traffic.
+            NFO-Mezirim is a luxury serviced shortlet apartment in Lugbe, Abuja.
+            Conveniently situated along the Airport Road corridor, it is the perfect
+            rental close to town and the airport — close enough to make an early flight
+            and far enough back to sleep in total serenity.
           </p>
           <p className="residence__text">
-            Each apartment is finished the way you'd finish your own — full-height
-            oak joinery, stone-topped kitchens, cove lighting you can dim to
-            nothing, and beds dressed in fresh white linen before every arrival.
-            Solar arrays across the roofline keep the lights and air conditioning
-            running when the grid does not.
+            Whether you are looking for an apartment near the airport, a fully serviced
+            stay close to the expressway, or a comfortable shortlet in Abuja, each home
+            is finished the way you'd finish your own. Enjoy stone-topped kitchens,
+            en-suite bedrooms, and fresh white linen. Rooftop solar arrays keep the
+            lights and air conditioning running seamlessly 24/7.
           </p>
           <a
             className="residence__address"
